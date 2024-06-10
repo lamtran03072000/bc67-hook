@@ -14,6 +14,8 @@ import { Provider } from 'react-redux';
 import { store } from './redux/store';
 import NumberRedux from './pages/ExRedux/NumberRedux';
 import FontSizeRedux from './pages/ExRedux/FontSizeRedux';
+import ChangeCarRedux from './pages/ExRedux/ChangeCarRedux';
+import ChatRedux from './pages/ExRedux/ChatRedux';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -32,6 +34,8 @@ root.render(
           <Route path="effect-unmount" element={<UseEffectUnMount />} />
           <Route path="number-redux" element={<NumberRedux />} />
           <Route path="fontsize-redux" element={<FontSizeRedux />} />
+          <Route path="change-car-redux" element={<ChangeCarRedux />} />
+          <Route path="chat-redux" element={<ChatRedux />} />
         </Route>
       </Routes>
     </BrowserRouter>

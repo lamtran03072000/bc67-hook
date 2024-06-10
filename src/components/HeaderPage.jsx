@@ -95,6 +95,28 @@ const HeaderPage = () => {
                 Font size Redux
               </NavLink>
             </li>
+            <li className="nav-item">
+              <NavLink
+                className={({ isActive }) => {
+                  return isActive ? 'nav-link text-dark bg-light' : 'nav-link';
+                }}
+                aria-current="page"
+                to="/change-car-redux"
+              >
+                Change car redux
+              </NavLink>
+            </li>
+            <li className="nav-item">
+              <NavLink
+                className={({ isActive }) => {
+                  return isActive ? 'nav-link text-dark bg-light' : 'nav-link';
+                }}
+                aria-current="page"
+                to="/chat-redux"
+              >
+                Chat redux
+              </NavLink>
+            </li>
 
             {/* <li className="nav-item dropdown">
               <a

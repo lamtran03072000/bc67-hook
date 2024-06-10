@@ -1,18 +1,28 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+import { changeFontSize } from '../../redux/fontsize/fontsizeSlice';
 
 const FontSizeRedux = () => {
-  const fontSize = useSelector((state) => state.fontSizeReducer);
+  const { number } = useSelector((state) => state.fontSizeReducer);
+
+  const dispatch = useDispatch();
+
   return (
     <div>
       <p
         style={{
-          fontSize: fontSize,
+          fontSize: number,
         }}
       >
         Hello bc 67
       </p>
-      <button>Plus font size</button>
+      <button
+        onClick={() => {
+          dispatch(changeFontSize(number + 1));
+        }}
+      >
+        Plus font size
+      </button>
     </div>
   );
 };
