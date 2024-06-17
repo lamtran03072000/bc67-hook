@@ -18,6 +18,7 @@ import ChangeCarRedux from './pages/ExRedux/ChangeCarRedux';
 import ChatRedux from './pages/ExRedux/ChatRedux';
 import BookTicket from './pages/ExRedux/BookTicket/BookTicket';
 import PhoneShop from './pages/ExRedux/PhoneShop/PhoneShop';
+import UseRefDemo from './pages/Hooks/useRef/UseRefDemo';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -40,6 +41,7 @@ root.render(
           <Route path="chat-redux" element={<ChatRedux />} />
           <Route path="book-ticket" element={<BookTicket />} />
           <Route path="phone-shop" element={<PhoneShop />} />
+          <Route path="useRef-demo" element={<UseRefDemo />} />
         </Route>
       </Routes>
     </BrowserRouter>

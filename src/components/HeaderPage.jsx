@@ -139,6 +139,17 @@ const HeaderPage = () => {
                 Phone shop
               </NavLink>
             </li>
+            <li className="nav-item">
+              <NavLink
+                className={({ isActive }) => {
+                  return isActive ? 'nav-link text-dark bg-light' : 'nav-link';
+                }}
+                aria-current="page"
+                to="/useRef-demo"
+              >
+                useRef
+              </NavLink>
+            </li>
 
             {/* <li className="nav-item dropdown">
               <a
