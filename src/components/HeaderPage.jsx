@@ -117,6 +117,28 @@ const HeaderPage = () => {
                 Chat redux
               </NavLink>
             </li>
+            <li className="nav-item">
+              <NavLink
+                className={({ isActive }) => {
+                  return isActive ? 'nav-link text-dark bg-light' : 'nav-link';
+                }}
+                aria-current="page"
+                to="/book-ticket"
+              >
+                Book ticket
+              </NavLink>
+            </li>
+            <li className="nav-item">
+              <NavLink
+                className={({ isActive }) => {
+                  return isActive ? 'nav-link text-dark bg-light' : 'nav-link';
+                }}
+                aria-current="page"
+                to="/phone-shop"
+              >
+                Phone shop
+              </NavLink>
+            </li>
 
             {/* <li className="nav-item dropdown">
               <a

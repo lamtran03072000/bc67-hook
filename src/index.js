@@ -16,6 +16,8 @@ import NumberRedux from './pages/ExRedux/NumberRedux';
 import FontSizeRedux from './pages/ExRedux/FontSizeRedux';
 import ChangeCarRedux from './pages/ExRedux/ChangeCarRedux';
 import ChatRedux from './pages/ExRedux/ChatRedux';
+import BookTicket from './pages/ExRedux/BookTicket/BookTicket';
+import PhoneShop from './pages/ExRedux/PhoneShop/PhoneShop';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -36,6 +38,8 @@ root.render(
           <Route path="fontsize-redux" element={<FontSizeRedux />} />
           <Route path="change-car-redux" element={<ChangeCarRedux />} />
           <Route path="chat-redux" element={<ChatRedux />} />
+          <Route path="book-ticket" element={<BookTicket />} />
+          <Route path="phone-shop" element={<PhoneShop />} />
         </Route>
       </Routes>
     </BrowserRouter>

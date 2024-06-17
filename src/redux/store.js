@@ -3,6 +3,7 @@ import { numberSlice } from './number/numberSlice';
 import fontsizeSlice from './fontsize/fontsizeSlice';
 import carSlice from './car/carSlice';
 import chatSlice from './chats/chatSlice';
+import movieSlice from './movie/movieSlice';
 
 export const store = configureStore({
   reducer: {
@@ -14,5 +15,7 @@ export const store = configureStore({
     carReducer: carSlice,
 
     chatReducer: chatSlice,
+
+    movieReducer: movieSlice,
   },
 });
