@@ -7,6 +7,7 @@ const UseRefDemo = () => {
     userName: 'abc',
     pass: 'ccc',
   });
+
   const divRef = useRef();
   let [like, setLike] = useState(1);
 
@@ -15,14 +16,15 @@ const UseRefDemo = () => {
 
     refInfo.current = {
       ...refInfo.current,
+
       [name]: value,
     };
   };
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('info', refInfo.current);
-    console.log('div', divRef.current);
-    divRef.current.style.backgroundColor = 'red';
+
+    // console.log('refInfo.current: ', refInfo.current);
+    divRef.current.style.background = 'red';
   };
   return (
     <div>
