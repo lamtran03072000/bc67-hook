@@ -3,7 +3,7 @@ import { Button, Modal } from 'antd';
 import { useDispatch, useSelector } from 'react-redux';
 import { removePhoneCart } from '../../../redux/phone/phoneSlice';
 
-const PhoneCart = () => {
+const PhoneCart = ({ refCart }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const dispatch = useDispatch();
@@ -49,7 +49,12 @@ const PhoneCart = () => {
 
   return (
     <>
-      <button className="btn btn-primary" type="primary" onClick={showModal}>
+      <button
+        ref={refCart}
+        className="btn btn-primary"
+        type="primary"
+        onClick={showModal}
+      >
         Giỏ hàng
       </button>
       <Modal

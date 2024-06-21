@@ -18,6 +18,7 @@ const PhoneShop = () => {
     promise
       .then((res) => {
         dispatch(postListPhoneAction(res.data));
+        setOpen(true);
       })
       .catch((err) => {
         console.log(err);
@@ -29,13 +30,26 @@ const PhoneShop = () => {
   // tour
   const steps = [
     {
-      title: 'Bước 1',
-      description: 'Put your files here.',
+      title: 'Đây là một sản phẩm trong cửa hàng',
+      nextButtonProps: {
+        children: 'Bước tiếp theo',
+      },
+      description: (
+        <div>
+          'Bạn có thể mua sản phẩm này bằng cách click vào nút mua hàng'
+          {/* <img
+            src="https://media.vneconomy.vn/w800/images/upload/2021/04/20/1-15287798691391393904544-0-0-482-858-crop-15287798725121646656721.jpg"
+            width={'100%'}
+            height={'100%'}
+            alt=""
+          /> */}
+        </div>
+      ),
       target: () => ref1.current,
     },
     {
-      title: 'Bước 2',
-      description: 'Save your changes.',
+      title: 'Đây là giỏ hàng',
+      description: 'Các sản phẩm bạn mua sẽ được cho vào giỏ hàng',
       target: () => ref2.current,
     },
   ];
@@ -45,16 +59,10 @@ const PhoneShop = () => {
   }, []);
   return (
     <div>
-      <button ref={ref1} className="btn btn-success me-3">
-        Bước 1
-      </button>
-      <button ref={ref2} className="btn btn-primary">
-        Bước 2
-      </button>
       <br />
       <br />
-      <PhoneCart />
-      <ListPhone />
+      <PhoneCart refCart={ref2} />
+      <ListPhone refCard={ref1} />
       {/* Tour */}
       <Tour open={open} onClose={() => setOpen(false)} steps={steps} />
     </div>
